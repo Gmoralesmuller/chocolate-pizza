@@ -2,7 +2,6 @@
     --maxwidth:70vw;
     --colortext:#723e25;
 }
-
 header{
     display: flex;
     justify-content:space-between;
@@ -10,6 +9,7 @@ header{
     margin-inline: auto;
     margin-top: 35px;
     margin-bottom: 25px;
+    flex-wrap: wrap;
 }
 header .logo{
     display: flex;
@@ -27,6 +27,7 @@ header ul{
     display: flex;
     gap: 2px;
     list-style-type: none;
+    flex-wrap: wrap;
 }
 header li:nth-child(7){
     margin-left: 20px;
@@ -47,7 +48,8 @@ header .brand #subtittle{
 main{
     max-width: var(--maxwidth);
     margin-inline: auto;
-    font-family:serif ;
+    font-family: serif;
+    padding: 0 15px;
 }
 main .encabezado_hr{
     background: url(img/hr-img.png);
@@ -62,6 +64,7 @@ main .container {
 main .container #head{
     display: flex;
     justify-content:space-between;
+    flex-wrap: wrap;
 }
 main .container h1{
     font-family: 'Oswald';
@@ -93,6 +96,7 @@ main .container #print p{
 main .container img{
     margin-top: 10px;
     margin-bottom: 20px;
+    width: 100%;
 }
 main .container .hero_p{
     margin-block: 20px;
@@ -102,15 +106,19 @@ main .container .hero_p{
     text-indent: 20px;
 }
 main .ingredients{
-    background: url(img/list-bg.png) 100%;
+    background: url(img/list-bg.png) no-repeat center center;
+    background-size: cover;
     display: flex;
     justify-content: space-around;
     font-family: 'Patrick Hand SC';
-    height: 300px;
-    margin-bottom: 40px;
+    padding: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    width: auto;
+    height: auto;
 }
 main .ingredients label{
-    font-size: large;
+    font-size: x-large;
     color: #723e25;
 }
 input[type="checkbox"] {
@@ -126,24 +134,24 @@ input[type="checkbox"] {
     position: relative;
 }
 
-input[type="checkbox"]:checked::before {
+input[type="checkbox"]:checked::after {
     content: "";
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 4px;
-    height: 4px;
-    background-color: var(--colortext);
-    transform: translate(-50%, -50%);
-    border-radius: 2px;
+    top: 30%;
+    left: 70%;
+    width: 5px;
+    height: 15px;
+    border: solid var(--colortext);
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -50%) rotate(45deg);
 }
 main .ingredients ul{
-    margin-left: 90px;
+    margin-left: 10px;
     margin-block: 40px;
     list-style-type: none;
 }
 main .ingredients li{
-    margin-left: 30px;
+    margin-left: 10px;
     margin-block: 10px;
     list-style-type: none;
 }
@@ -156,6 +164,7 @@ main .autor{
     margin-top: 30px;
     margin-bottom: 70px;
     color: var(--colortext);
+    flex-wrap: wrap;
 }
 main .autor h2{
     font-weight: bold;
@@ -166,7 +175,7 @@ main .autor p{
     font-size: 1.3rem;
 }
 #info_autor {
-    width: 1600px;
+    width: 600px;
     margin-left: 25px;
 }
 .autor a{
@@ -174,13 +183,13 @@ main .autor p{
     text-decoration: none;
     color: white;
     display: inline-block;
-    width: 400px; 
+    width: 200px; 
     height: 50px;
     text-align: center;
     line-height: 50px;
     font-family: 'Oswald';
-    margin-left: 200px;
-    margin-top: 50px;
+    margin-left: 160px;
+    margin-top: 60px;
 }
 .autor img{
     border-radius: 50% ; 
@@ -216,4 +225,101 @@ footer .p{
     margin-bottom: 100px;
     margin-left: 60px;
     opacity: 60%;
+}
+/* Para Responsividad */
+@media (max-width: 1200px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .logo, header ul {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    main .container #head {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main .container h1 {
+        text-align: center;
+    }
+
+    main .ingredients {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .autor {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #info_autor {
+        margin: 0;
+        text-align: center;
+        width: auto;
+    }
+
+    .autor a {
+        margin: 0;
+        width: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .brand #tittle {
+        font-size: 2rem;
+    }
+
+    header .brand #subtittle {
+        font-size: 0.8rem;
+    }
+
+    main .container h1 {
+        font-size: 2rem;
+    }
+
+    main .ingredients {
+        height: auto;
+        padding: 20px;
+    }
+
+    .autor a {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header .brand #tittle {
+        font-size: 1.5rem;
+    }
+
+    header .brand #subtittle {
+        font-size: 0.7rem;
+    }
+
+    main .container h1 {
+        font-size: 1.5rem;
+    }
+
+    main .ingredients ul {
+        margin-left: 0;
+        margin-block: 20px;
+    }
+
+    .autor img {
+        margin-top: 0;
+    }
+
+    footer .p {
+        margin-left: 0;
+    }
 }
