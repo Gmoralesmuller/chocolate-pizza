@@ -49,8 +49,110 @@ main{
     margin-inline: auto;
     font-family:serif ;
 }
- main .encabezado_hr{
+main .encabezado_hr{
     background: url(img/hr-img.png);
     height: 1rem;
     border: none;
+}
+main .container {
+    margin-top: 4px;
+    display: flex;
+    flex-direction: column;
+}
+main .container #head{
+    display: flex;
+    justify-content:space-between;
+}
+main .container h1{
+    font-family: 'Oswald';
+    font-size: 2.8rem;
+    font-weight:bold;
+    margin-bottom: 10px;
+}
+main .container #h1 p{
+    font-family: 'Patrick Hand SC';
+    font-size: 1rem;
+    opacity: 40%;
+}
+main .container #print a{
+    display: flex;
+    margin-top: 50px;
+    font-family: 'Patrick Hand SC';
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+main .container #print a img{
+    height: 12px;
+    margin-top: 3px;
+}
+main .container #print p{
+    opacity: 30%;
+}
+main .container img{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+main .container .hero_p{
+    margin-block: 20px;
+    font-size: 1.2rem;
+    line-height: 25px;
+    color: var(--colortext);
+    text-indent: 20px;
+}
+main .ingredients{
+    background: url(img/list-bg.png) 100%;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Patrick Hand SC';
+    height: 300px;
+    margin-bottom: 40px;
+}
+main .ingredients label{
+    font-size: 1.5rem;
+}
+main .ingredients ul{
+    margin-block: 40px;
+}
+main .ingredients li{
+    margin-block: 10px;
+}
+:checked + label{
+    text-decoration: line-through;
+    font-weight: 800;
+}
+main .autor{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 70px;
+    color: var(--colortext);
+}
+main .autor h2{
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+main .autor p{
+    font-size: 1.3rem;
+}
+#info_autor {
+    width: 600px;
+    margin-left: 25px;
+}
+.autor a{
+    background-color:#bc7058;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    width: 200px; 
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-family: 'Oswald';
+    margin-left: 40px;
+    margin-top: 15px;
+}
+.autor img{
+    width: 90px;
 }
