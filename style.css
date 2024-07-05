@@ -55,7 +55,7 @@ main .encabezado_hr{
     border: none;
 }
 main .container {
-    margin-top: 4px;
+    margin-top: 6px;
     display: flex;
     flex-direction: column;
 }
@@ -110,13 +110,42 @@ main .ingredients{
     margin-bottom: 40px;
 }
 main .ingredients label{
-    font-size: 1.5rem;
+    font-size: large;
+    color: #723e25;
+}
+input[type="checkbox"] {
+    -webkit-appearance: none;  
+    -moz-appearance: none;  
+    appearance: none; 
+    width: 15px;
+    height: 15px;
+    border: 1px solid var(--colortext);
+    border-radius: 3px;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="checkbox"]:checked::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    background-color: var(--colortext);
+    transform: translate(-50%, -50%);
+    border-radius: 2px;
 }
 main .ingredients ul{
+    margin-left: 90px;
     margin-block: 40px;
+    list-style-type: none;
 }
 main .ingredients li{
+    margin-left: 30px;
     margin-block: 10px;
+    list-style-type: none;
 }
 :checked + label{
     text-decoration: line-through;
@@ -137,7 +166,7 @@ main .autor p{
     font-size: 1.3rem;
 }
 #info_autor {
-    width: 600px;
+    width: 1600px;
     margin-left: 25px;
 }
 .autor a{
@@ -145,14 +174,46 @@ main .autor p{
     text-decoration: none;
     color: white;
     display: inline-block;
-    width: 200px; 
+    width: 400px; 
     height: 50px;
     text-align: center;
     line-height: 50px;
     font-family: 'Oswald';
-    margin-left: 40px;
-    margin-top: 15px;
+    margin-left: 200px;
+    margin-top: 50px;
 }
 .autor img{
+    border-radius: 50% ; 
+    display: block; 
+    margin-top: 22px;
     width: 90px;
+    height: 90px;
+}
+footer .hr{
+    position: relative;
+}
+footer .hr hr{
+    border-bottom: none;
+    width: 100%;
+    opacity: 40%;
+}
+footer .hr img{
+    display: block;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    border: 5px solid white;
+    width: 40px;
+    opacity: 80%;
+}
+footer .p{
+    font-size: 1.1rem;
+    margin-top: 50px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 100px;
+    margin-left: 60px;
+    opacity: 60%;
 }
